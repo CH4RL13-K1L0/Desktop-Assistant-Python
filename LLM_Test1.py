@@ -8,7 +8,7 @@ from gtts import gTTS
 import wikipedia
 import uuid 
 
-model = GPT4All("llama-2-7b-chat.ggmlv3.q5_K_S.bin")
+model = GPT4All(r"FILEPATH HERE") <------- ENTER MODEL FILEPATH
 
 logging.basicConfig(level=logging.WARNING)
 
@@ -43,7 +43,7 @@ def assistant():
                          print("Assistant: Goodbye!")
                          exit()
  
-         output = model.generate(user_command, max_tokens=2048)
+         output = model.generate(user_command, max_tokens= SPECIFY) <------ SPECIFY MAX TOKENS FOR USE
 
          print("Assistant:", output)
          print('\n')
